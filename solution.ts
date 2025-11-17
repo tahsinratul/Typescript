@@ -1,5 +1,3 @@
-//Problem 1
-
 type FormatValueType = string | number | boolean;
 type FormatReturnValue = string | number | boolean;
 
@@ -15,14 +13,13 @@ function formatValue(value: FormatValueType): FormatReturnValue {
   throw new Error("Invalid value type provided.");
 }
 
-
-console.log(formatValue('ratul')); 
-console.log(formatValue(10));     
-console.log(formatValue(true)); 
-
+// console.log(formatValue('hello')); 
+// console.log(formatValue(10));     
+// console.log(formatValue(true)); 
 
 
-//Problem 2
+
+
 
 type LengthInput = string | any[];
 
@@ -35,13 +32,12 @@ function getLength(value: LengthInput): number {
   throw new Error("Input is neither a string nor an array.");
 }
 
-
-console.log(getLength('typescript'));
-console.log(getLength([10, 20, 30, 40]));
-
+// console.log(getLength('typescript'));
+// console.log(getLength([10, 20, 30, 40]));
 
 
-//Problem 3
+
+
 
 class Person {
   name: string;
@@ -57,15 +53,15 @@ class Person {
   }
 }
 
-
 const person1 = new Person('John Doe', 30);
-console.log(person1.getDetails()); 
 const person2 = new Person('Alice', 25);
-console.log(person2.getDetails());
+
+// console.log(person1.getDetails()); 
+// console.log(person2.getDetails());
 
 
 
-//Problem 4
+
 
 interface RatedItem {
   title: string;
@@ -83,12 +79,11 @@ const books: RatedItem[] = [
   { title: 'Book C', rating: 4.8 },
 ];
 
-
-console.log(filterByRating(books));
-
+// console.log(filterByRating(books));
 
 
-//Problem 5
+
+
 
 type User = {
   id: number;
@@ -109,12 +104,11 @@ const users: User[] = [
   { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
 ];
 
-
-console.log(filterActiveUsers(users));
-
+// console.log(filterActiveUsers(users));
 
 
-//Problem 6
+
+
 
 interface Book {
   title: string;
@@ -127,7 +121,7 @@ function printBookDetails(book: Book): void {
   const availability = book.isAvailable ? 'Yes' : 'No';
   const details = `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availability}`;
 
-  console.log(details);
+//   console.log(details);
 }
 
 const myBook: Book = {
@@ -141,7 +135,7 @@ printBookDetails(myBook);
 
 
 
-//Problem 7
+
 
 function getUniqueValues<T extends string | number>(arr1: T[], arr2: T[]): T[] {
   const combinedArray: T[] = [];
@@ -168,14 +162,14 @@ function getUniqueValues<T extends string | number>(arr1: T[], arr2: T[]): T[] {
   return combinedArray;
 }
 
-
 const array1 = [1, 2, 3, 4, 5];
 const array2 = [3, 4, 5, 6, 7];
-console.log(getUniqueValues(array1, array2));
+
+// console.log(getUniqueValues(array1, array2));
 
 
 
-//Problem 8
+
 
 interface Product {
   name: string;
@@ -183,7 +177,6 @@ interface Product {
   quantity: number;
   discount?: number;
 }
-
 
 function calculateTotalPrice(products: Product[]): number {
   if (products.length === 0) {
@@ -208,14 +201,10 @@ function calculateTotalPrice(products: Product[]): number {
   return totalPrice;
 }
 
-
 const products: Product[] = [
   { name: 'Pen', price: 10, quantity: 2 },                    
   { name: 'Notebook', price: 25, quantity: 3, discount: 10 }, 
   { name: 'Bag', price: 50, quantity: 1, discount: 20 },     
 ];
 
-
-console.log(calculateTotalPrice(products));
-
-//End
+// console.log(calculateTotalPrice(products));
