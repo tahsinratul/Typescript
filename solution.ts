@@ -14,7 +14,7 @@ function formatValue(value: FormatValueType): FormatReturnValue {
 }
 
 // console.log(formatValue('hello')); 
-// console.log(formatValue(10));     
+// console.log(formatValue(5));     
 // console.log(formatValue(true)); 
 
 
@@ -75,7 +75,7 @@ function filterByRating(items: RatedItem[]): RatedItem[] {
 const books: RatedItem[] = [
   { title: 'Book A', rating: 4.5 },
   { title: 'Book B', rating: 3.2 },
-  { title: 'Book C', rating: 4.8 },
+  { title: 'Book C', rating: 5.0 },
 ];
 
 // console.log(filterByRating(books));
