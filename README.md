@@ -1,4 +1,5 @@
-What is the use of the keyof keyword in TypeScript? Provide an example.
+Q2: What is the use of the keyof keyword in TypeScript? Provide an example.
+
 
 keyof কীওয়ার্ডটি একটি অবজেক্ট টাইপ থেকে তার প্রপার্টি কীগুলির ইউনিয়ন টাইপ (Union Type of Property Keys) পেতে ব্যবহৃত হয়।
 
@@ -6,16 +7,15 @@ keyof কীওয়ার্ডটি একটি অবজেক্ট ট�
 
 ফলাফল: এটি একটি স্ট্রিং লিটারেল ইউনিয়নের টাইপ প্রদান করে, যেখানে স্ট্রিংগুলো হল অবজেক্টের কী-এর নাম।
 
+
 Example:
 
 type Product = {
     id: number;
     name: string;
     price: number;
-};
-
+}
 type ProductKeys = keyof Product; 
-
 function getProductValue<T, K extends keyof T>(obj: T, key: K): T[K] {
     return obj[key];
 }
