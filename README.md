@@ -28,6 +28,11 @@ console.log(productName);
 
 
 
+
+
+
+
+
 Q3: Explain the difference between any, unknown, and never types in TypeScript.
 
 Ans:
