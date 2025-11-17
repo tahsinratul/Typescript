@@ -72,7 +72,6 @@ function filterByRating(items: RatedItem[]): RatedItem[] {
   return items.filter(item => item.rating >= 4);
 }
 
-
 const books: RatedItem[] = [
   { title: 'Book A', rating: 4.5 },
   { title: 'Book B', rating: 3.2 },
@@ -91,7 +90,6 @@ type User = {
   email: string;
   isActive: boolean;
 };
-
 
 function filterActiveUsers(users: User[]): User[] {
 
@@ -140,7 +138,6 @@ printBookDetails(myBook);
 function getUniqueValues<T extends string | number>(arr1: T[], arr2: T[]): T[] {
   const combinedArray: T[] = [];
   const seen: { [key: string]: boolean } = {};
-  
 
   const processArray = (arr: T[]) => {
     for (let i = 0; i < arr.length; i++) {
@@ -183,10 +180,8 @@ function calculateTotalPrice(products: Product[]): number {
     return 0;
   }
 
-
   const individualPrices = products.map(product => {
     const basePrice = product.price * product.quantity;
-    
    
     if (product.discount !== undefined && product.discount > 0) {
       const discountAmount = basePrice * (product.discount / 100);
@@ -195,7 +190,6 @@ function calculateTotalPrice(products: Product[]): number {
     return basePrice;
   });
 
- 
   const totalPrice = individualPrices.reduce((total, currentPrice) => total + currentPrice, 0);
 
   return totalPrice;
