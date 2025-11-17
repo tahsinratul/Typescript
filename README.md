@@ -18,9 +18,9 @@ type Product = {
 <br>
 type ProductKeys = keyof Product; 
 <br>
-function getProductValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+function getProductValue<T, K extends keyof T>(obj: T, key: K): T[K] <br>{
     return obj[key];
-}
+}<br>
 const laptop: Product = { id: 1, name: "Lenovo", price: 55000 };
 
 const productName: string = getProductValue(laptop, "name");<br>
