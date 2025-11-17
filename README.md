@@ -15,11 +15,13 @@ type Product = {
     name: string;
     price: number;
 }
+<br>
 type ProductKeys = keyof Product; 
+<br>
 function getProductValue<T, K extends keyof T>(obj: T, key: K): T[K] {
     return obj[key];
 }
 const laptop: Product = { id: 1, name: "Lenovo", price: 55000 };
 
-const productName: string = getProductValue(laptop, "name");
+const productName: string = getProductValue(laptop, "name");<br>
 console.log(productName);
