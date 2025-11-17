@@ -8,25 +8,23 @@ keyof কীওয়ার্ডটি একটি অবজেক্ট ট�
 
 * ফলাফল: এটি একটি স্ট্রিং লিটারেল ইউনিয়নের টাইপ প্রদান করে, যেখানে স্ট্রিংগুলো হল অবজেক্টের কী-এর নাম।
 
-
-Example:
-
+```Typescript
 type Product = {
     id: number;
     name: string;
     price: number;
-}
-<br>
+};
+
 type ProductKeys = keyof Product; 
-<br>
-function getProductValue<T, K extends keyof T>(obj: T, key: K): T[K] <br>{
+
+function getProductValue<T, K extends keyof T>(obj: T, key: K): T[K] {
     return obj[key];
-}<br>
+}
 const laptop: Product = { id: 1, name: "Lenovo", price: 55000 };
 
-const productName: string = getProductValue(laptop, "name");<br>
+const productName: string = getProductValue(laptop, "name");
 console.log(productName);
-<br><br><br><br><br>
+```
 
 Q3: Explain the difference between any, unknown, and never types in TypeScript.
 
